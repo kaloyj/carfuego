@@ -1,27 +1,31 @@
-import React from "react";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { hot } from "react-hot-loader/root";
 import { GlobalStyles } from "./global-styles";
-import { Discover } from "./discover/discover";
+import { Router } from "@reach/router";
+import Home from "./home/home";
+import Cookbook from "./cookbook/cookbook";
 
 function App() {
   return (
     <div
       css={{
-        border: "3px solid black",
         height: "100vh",
         width: "100vw",
-        overflow: "hidden",
+        overflowX: "hidden",
+        overflowY: "auto",
         padding: "4%"
       }}
     >
-      <GlobalStyles></GlobalStyles>
-      <h2 className="accent-font" css={{ textTransform: "capitalize" }}>
-        Discover
-      </h2>
-      <Discover></Discover>
+      <GlobalStyles />
+      <Router>
+        <Home path="/">
+          <Cookbook path="/" />
+        </Home>
+        <Cookbook path="/cookbook" />
+      </Router>
     </div>
   );
 }
 
-export default App;
+export default hot(App);

@@ -1,21 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-export default function CarouselItem() {
+export default function MiniCarouselItem() {
   return (
     <div
       css={{
-        flex: "0 0 70%",
-        marginRight: "5%",
-        height: "150px",
-        borderRadius: "20px",
+        flex: "0 0 28%",
+        marginRight: "4%",
+        height: "90px",
+        borderRadius: "10px",
         overflow: "hidden"
       }}
     >
       <img
         src="https://picsum.photos/200/300"
         css={{ width: "100%", height: "100%", objectFit: "cover" }}
-        alt="recipe sneakpeek"
+        alt="cookbook item"
       />
     </div>
   );

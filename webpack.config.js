@@ -4,11 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: ["react-hot-loader/patch", "./src/index.tsx"],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 8080
+    port: 8080,
+    historyApiFallback: true
   },
   devtool: "inline-source-map",
   module: {
@@ -56,7 +57,8 @@ module.exports = {
   },
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/"
   },
   plugins: [
     new MiniCssExtractPlugin({
