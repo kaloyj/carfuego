@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import CarouselItem from "../components/carousel/carousel-item";
-import { RouteComponentProps } from "@reach/router";
 
-// eslint-disable-next-line no-unused-vars
-export default function Discover(props: RouteComponentProps) {
+export default function Discover() {
   return (
     <div>
       <h2 className="accent-font" css={{ textTransform: "capitalize" }}>

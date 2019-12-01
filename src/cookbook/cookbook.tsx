@@ -2,10 +2,8 @@
 import { jsx } from "@emotion/core";
 import { greyBase } from "../global-styles";
 import Categories from "./categories/categories";
-import { RouteComponentProps } from "@reach/router";
 
-// eslint-disable-next-line no-unused-vars
-export default function Cookbook(props: RouteComponentProps) {
+export default function Cookbook() {
   return (
     <div>
       <div

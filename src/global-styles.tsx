@@ -8,6 +8,7 @@ export const accentColor = "#9381FF";
 export const mainFontColor = "#820263";
 export const greyBase = "#B3B3B3";
 export const whiteBase = "#FFFFFF";
+export const redBase = "#FF1B1C";
 
 export function GlobalStyles() {
   return (
@@ -69,6 +70,25 @@ export function GlobalStyles() {
         h5,
         h6 {
           margin: 0;
+        }
+
+        .button-outline {
+          background-color: transparent;
+          border: none;
+          font-size: 14px;
+          width: 70px;
+          height: 40px;
+          border-radius: 5px;
+        }
+
+        .button-outline.primary {
+          color: ${accentColor};
+          border: 1px solid ${accentColor};
+        }
+
+        .button-outline.danger {
+          color: ${redBase};
+          border: 1px solid ${redBase};
         }
       `}
     ></Global>
