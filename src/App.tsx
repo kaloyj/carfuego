@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { hot } from "react-hot-loader/root";
-import { GlobalStyles } from "./global-styles";
+import { GlobalStyles } from "./global-styles/general";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./home/home";
 import Recipe from "./cookbook/recipe/recipe";
 import { AnimatePresence } from "framer-motion";
+import RecipeEdit from "./cookbook/recipe/recipe-edit/recipe-edit";
+import { FlexStyles } from "./global-styles/flex";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       }}
     >
       <GlobalStyles />
+      <FlexStyles />
       <Router>
         <Route
           render={({ location }) => (
@@ -28,6 +31,11 @@ function App() {
                   exact
                   path="/cookbook/:recipeId"
                   component={Recipe}
+                ></Route>
+                <Route
+                  exact
+                  path="/cookbook/:recipeId/edit"
+                  component={RecipeEdit}
                 ></Route>
               </Switch>
             </AnimatePresence>

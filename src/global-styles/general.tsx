@@ -22,6 +22,10 @@ export function GlobalStyles() {
           box-sizing: border-box;
         }
 
+        .extra-light-font {
+          font-weight: 200;
+        }
+
         .light-font {
           font-weight: 300;
         }

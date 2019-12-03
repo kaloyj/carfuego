@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { greyBase } from "../global-styles";
+import { greyBase } from "../global-styles/general";
 import Categories from "./categories/categories";
 
 export default function Cookbook() {
